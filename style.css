@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    box-sizing: border-box;
+    background-color: hsl(0, 100%, 74%) ;
+    background-image: url("bg-intro-desktop.png");
+    
+}
+.container{
+    width: 100vh;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 80%;
+    height: 500px;
+    margin: 80px 80px; */
+}
+.left{
+    flex-basis: 50%;
+    flex-wrap: wrap;
+    margin: 0px 30px;
+    padding: 10px;
+}
+.left h2{
+    font-size: 40px;
+    color: white;
+    width: 400px;
+}
+.left p{
+    width: 400px;
+    color: white;
+   
+}
+.right-background p {
+    color: hsl(246, 25%, 77%);
+}
+
+.right{
+    flex-basis: 50%;
+}
+
+.header{
+    background-color: hsl(248, 32%, 49%);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 3vh;
+    color: white;
+    border-radius: 10px;
+    accent-color: hsl(248, 32%, 49%);
+    
+}
+.right-background{
+    background-color: white;
+    padding: 30px;
+}
+input{
+    width: 50vh;
+    height: 6vh;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    border: 2px solid;
+    border-color: hsl(246, 25%, 77%);
+    border-radius: 8px;
+
+}
+
+#trial {
+    width: 55vh;
+    background-color: hsl(154, 59%, 51%);
+    height: 7vh;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    border: 2px solid;
+    border-color: hsl(246, 25%, 77%);
+    border-radius: 8px;
+    color: white;
+}
+
+#click{
+    font-size: 13px;
+}
+#terms {
+    border: none;
+    background-color: transparent;
+    color: red;
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+}
+@media screen and (max-width:500px)  {
+    .container{
+           flex-direction: column;
+           width: 300px;
+           height: 300px;
+           margin-top: 250px;
+           margin-left: 50px;
+           
+           align-items: center;
+           justify-content: center;
+           text-align: center;       
+       } 
+    .right-background{
+        margin-right: 30px;
+    }
+       
+    .left h2{
+            margin-right: 20px;
+            margin-bottom: 30px;
+            font-size: 35px;
+            width: 300px;
+                    
+    }
+    .left p{
+        width:300px;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+    .header {
+        width: 290px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .header p{
+        width: 200px;
+        margin-left: 50px;
+    }
+    .right{
+        width: 360px ;
+    }
+    input{
+        width: 235px;
+    }
+    #trial{
+        width: 270px;
+    }
+   }
