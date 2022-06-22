@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 </head>
 <body>
     <div class="container">
@@ -19,15 +20,34 @@
             </div>
             <div class="right-background">
                 <form action="">
-                    <input type="text" placeholder="Jonathan" required>
-                    <input type="text" placeholder="Last Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <input type="Name" placeholder="Password" required>
+                    <label for="First Name" class="First-Name" data-error1="First Name cannot be empty"><input type="text" placeholder="First Name" id="Firstname"></label>
+                    <br>
+                    <br>          
+                    <label for="Last Name" class="Last-Name" data-error2="Last Name cannot be empty">   <input type="text" placeholder="Last Name" id="Lastname"></label> 
+                    <br>
+                    <br>       
+                    <label for="Email" class="Email" data-error3="Looks like this is not an email"><input type="email" placeholder="Email Address" id="Email"></label>
+                    <br>
+                    <br>
+                    <label for="Password" class="Password" data-error4="Password cannot be empty"> <input type="password" placeholder="Password" id="Password"></label>  
+                    <br>
+                    <br>   
+                    
                     <a href="#"><button id="trial">CLAIM YOUR FREE TRIAL</button></a>
                 </form>
                 <p id="click">By clicking the button, you are agreeing to our <a href="#"><button id="terms">Terms and Services</button></a></p>
             </div>
         </div>
-    </div>  
+    </div>
+    <script>
+      document.querySelectorAll('.First-Name[data-error1] #Firstname').forEach(inpEl => {inpEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error1'));
+      })
+      document.querySelectorAll('.Last-Name[data-error2] #Lastname').forEach(inpEl => {inpEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error2'));
+      })
+      document.querySelectorAll('.Email[data-error3] #Email').forEach(inpEl => {inpEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error3'));
+      })
+      document.querySelectorAll('.Password[data-error4] #Password').forEach(inpEl => {inpEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error4'));
+      })
+    </script>  
 </body>
 </html>

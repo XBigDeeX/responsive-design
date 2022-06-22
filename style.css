@@ -1,38 +1,41 @@
-*{
+*{  box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Poppins', sans-serif;
 }
 body{
-    box-sizing: border-box;
+
     background-color: hsl(0, 100%, 74%) ;
     background-image: url("bg-intro-desktop.png");
     
 }
 .container{
-    width: 100vh;
+    width: 100%;
     height: 100vh;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 80%;
-    height: 500px;
-    margin: 80px 80px; */
+    
 }
 .left{
-    flex-basis: 50%;
-    flex-wrap: wrap;
-    margin: 0px 30px;
+    flex-basis: 55%;
+    margin-left: 180px;
     padding: 10px;
 }
 .left h2{
-    font-size: 40px;
+    font-size: 45px;
     color: white;
     width: 400px;
+    margin-bottom: 20px;
+    padding-left: 20px;
 }
 .left p{
-    width: 400px;
+    width: 500px;
     color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-left: 20px;
    
 }
 .right-background p {
@@ -40,7 +43,9 @@ body{
 }
 
 .right{
-    flex-basis: 50%;
+    flex-basis: 45%;
+    padding-right: 200px;
+
 }
 
 .header{
@@ -50,17 +55,19 @@ body{
     margin-bottom: 3vh;
     color: white;
     border-radius: 10px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.4);
     accent-color: hsl(248, 32%, 49%);
     
 }
 .right-background{
+    border-radius: 10px;
     background-color: white;
     padding: 30px;
+    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.4);
 }
 input{
-    width: 50vh;
-    height: 6vh;
-    margin-bottom: 15px;
+    width: 500px;
+    height: 50px;
     padding-left: 30px;
     border: 2px solid;
     border-color: hsl(246, 25%, 77%);
@@ -68,8 +75,83 @@ input{
 
 }
 
+.First-Name[data-error1] #Firstname{
+    border-color: #c92432;
+    color: #c92432;
+    Background-image: url(icon-error.svg);
+    Background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: 10px;
+    Background-origin: content-box;
+    
+}
+
+.First-Name[data-error1]::after{
+    content: attr(data-error1);
+    color: #c92432;
+    font-size: 10px;
+    font-style: italic;
+    margin-left: 350px;
+}
+.Last-Name[data-error2] #Lastname{
+    border-color: #c92432;
+    color: #c92432;
+    Background-image: url(icon-error.svg);
+    Background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: 10px;
+    Background-origin: content-box;
+    
+}
+
+.Last-Name[data-error2]::after{
+    content: attr(data-error2);
+    color: #c92432;
+    font-size: 10px;
+    font-style: italic;
+    margin-left: 350px; 
+}
+
+.Email[data-error3] #Email{
+    border-color: #c92432;
+    color: #c92432;
+    Background-image: url(icon-error.svg);
+    Background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: 10px;
+    Background-origin: content-box;
+    
+}
+.Email[data-error3]::after{
+    content: attr(data-error3);
+    color: #c92432;
+    font-size: 10px;
+    font-style: italic;
+    margin-left: 350px;
+}
+
+.Password[data-error4] #Password{
+    border-color: #c92432;
+    color: #c92432;
+    Background-image: url(icon-error.svg);
+    Background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: 10px;
+    Background-origin: content-box;
+    
+}
+.Password[data-error4]::after{
+    content: attr(data-error4);
+    color: #c92432;
+    font-size: 10px;
+    font-style: italic;
+    margin-left: 350px;
+    
+}
+
+
 #trial {
-    width: 55vh;
+    width: 500px;
     background-color: hsl(154, 59%, 51%);
     height: 7vh;
     margin-bottom: 15px;
@@ -78,10 +160,12 @@ input{
     border-color: hsl(246, 25%, 77%);
     border-radius: 8px;
     color: white;
+    box-shadow: 0px 3px 0px 0px hsl(154, 70%, 15%);
 }
 
 #click{
     font-size: 13px;
+    padding-left: 55px;
 }
 #terms {
     border: none;
@@ -91,18 +175,48 @@ input{
     padding: 0px;
     font-size: 13px;
 }
-@media screen and (max-width:500px)  {
+
+/* Input:required:invalid {
+    Outline: none;
+    Border: none;
+    Border: 1px solid hsl(0, 100%, 74%);
+    Background-image: url(icon-error.svg);
+    Background-repeat: no-repeat;
+    background-position-x: 400px;
+    background-position-y: 10px;
+    Background-origin: content-box;
+  }
+  
+  Input:invalid+span {
+    Display: inline;
+    Color: hsl(0, 100%, 74%);
+    Float: right;
+    Font-size: 14px;
+  
+  }
+  
+  Input:invalid {
+    Outline: none;
+    Border: none;
+    Border: 1px solid hsl(154, 59% 31%);
+  }
+  
+  Span {
+    Display: none;
+  }
+   */
+@media screen and (max-width:800px)  {
     .container{
            flex-direction: column;
-           width: 300px;
-           height: 300px;
-           margin-top: 250px;
-           margin-left: 50px;
-           
-           align-items: center;
-           justify-content: center;
-           text-align: center;       
+           width: 100%;
+           height: 100%;
+           margin-top: 100px;
+           margin-left: 50px; 
        } 
+    .left{
+        margin-right: 220px;
+        text-align: center;
+    }
     .right-background{
         margin-right: 30px;
     }
@@ -116,25 +230,70 @@ input{
     }
     .left p{
         width:300px;
-        line-height: 20px;
+        line-height: 25px;
         margin-bottom: 30px;
     }
     .header {
-        width: 290px;
-        padding: 20px;
+        width: 310px;
+        padding: 15px;
         margin-bottom: 20px;
     }
     .header p{
         width: 200px;
         margin-left: 50px;
+        line-height: 25px;
     }
     .right{
         width: 360px ;
     }
     input{
-        width: 235px;
+        width: 255px;
+        margin-right: 20px;
+        padding-left: 10px;
+    }
+    .right-background{
+        width: 310px;
+        border-radius: 10px;
+        margin-bottom: 80px;
+    }
+
+    .First-Name[data-error1] #Firstname{
+        background-position-x: 200px;
+        background-position-y: 10px;       
+    }
+    .First-Name[data-error1]::after{
+        margin-left: 0px;
+    }
+
+    .Last-Name[data-error2] #Lastname{
+        background-position-x: 200px;
+        background-position-y: 10px;       
+    }
+    .Last-Name[data-error2]::after{
+        margin-left: 0px;
+    }
+
+    .Email[data-error3] #Email{
+        background-position-x: 200px;
+        background-position-y: 10px;       
+    }
+    .Email[data-error3]::after{
+        margin-left: 0px;
+    }
+
+    .Password[data-error4] #Password{
+        background-position-x: 200px;
+        background-position-y: 10px;       
+    }
+    .Password[data-error4]::after{
+        margin-left: 0px;
     }
     #trial{
-        width: 270px;
+        width: 255px;
+        padding-right: 25px;
+    }
+    #click{
+        padding-left: 10px;
+        text-align: center;
     }
    }
